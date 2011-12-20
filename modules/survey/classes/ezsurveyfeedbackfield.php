@@ -304,6 +304,12 @@ class eZSurveyFeedbackField extends eZSurveyEntry
             $mail->setSubject( $subject );
             $mail->setBody( $templateResult );
 
+
+            if ( $tpl_email->hasVariable( 'content_type' ) )
+            {
+                $mail->setContentType( $tpl_email->variable( 'content_type' ) );
+            }
+
             if ( $this->Num == 1 )
             {
                 $adminReceiver = $ini->variable( 'MailSettings', 'AdminEmail' );

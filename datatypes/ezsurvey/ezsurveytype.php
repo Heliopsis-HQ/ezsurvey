@@ -411,6 +411,12 @@ class eZSurveyType extends eZDataType
                         $mail->setSubject( $subject );
                         $mail->setBody( $templateResult );
 
+                        if ( $tpl_email->hasVariable( 'content_type' ) )
+                        {
+                            $mail->setContentType( $tpl_email->variable( 'content_type' ) );
+                        }
+
+
                         $mailResult = eZMailTransport::send( $mail );
 
                     }
