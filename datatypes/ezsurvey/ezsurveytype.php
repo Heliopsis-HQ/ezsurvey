@@ -421,7 +421,11 @@ class eZSurveyType extends eZDataType
                     }
                     $survey->executeBeforeLastRedirect( $node );
 
-                    $href = trim( $survey->attribute( 'redirect_submit' ) );
+                    /*
+                     * Modification bidon de la redirection afin de ne pas passer
+                     * par celle par défaut et profiter d'une page de confirmation
+                     */
+                    $href = trim( '/content/view/confirm/'.$nodeID );
                     $module = $GLOBALS['module'];
                     if ( $module instanceof eZModule )
                     {
