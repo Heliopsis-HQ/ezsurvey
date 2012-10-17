@@ -219,10 +219,10 @@ function removeClass( element, className )
 
     <input type="hidden" name="{$prefixAttribute}_ezsurvey_redirect_cancel_{$attributeID}" value="" />
 
-    <div class="block">
+    {*<div class="block">
     <label>{'After "Submit" redirect to URL'|i18n('survey')}:</label>
     <input class="box" name="{$prefixAttribute}_ezsurvey_redirect_submit_{$attributeID}" size="30" value="{$survey.redirect_submit|wash('xhtml')}" />
-    </div>
+    </div>*}
 
 <div class="survey-edit">
 <table class="list" cellspacing="0">
