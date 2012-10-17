@@ -2,7 +2,7 @@
 //
 // Created on: <02-Apr-2004 00:00:00 Jan Kudlicka>
 //
-// Copyright (C) 1999-2010 eZ Systems AS. All rights reserved.
+// Copyright (C) 1999-2012 eZ Systems AS. All rights reserved.
 //
 // This source file is part of the eZ Publish (tm) Open Source Content
 // Management System.
@@ -82,7 +82,7 @@ foreach ( $surveyList as $question )
     }
 }
 
-$tpl = templateInit();
+$tpl = eZTemplate::factory();
 
 $tpl->setVariable( 'survey', $survey );
 $tpl->setVariable( 'survey_questions', $surveyList );

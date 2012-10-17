@@ -2,7 +2,7 @@
 //
 // Created on: <02-Apr-2004 00:00:00 Jan Kudlicka>
 //
-// Copyright (C) 1999-2010 eZ Systems AS. All rights reserved.
+// Copyright (C) 1999-2012 eZ Systems AS. All rights reserved.
 //
 // This source file is part of the eZ Publish (tm) Open Source Content
 // Management System.
@@ -48,7 +48,7 @@ if ( !$survey )
 $res = eZTemplateDesignResource::instance();
 $res->setKeys( array( array( 'survey', $surveyID ) ) );
 
-$tpl = templateInit();
+$tpl = eZTemplate::factory();
 
 $tpl->setVariable( 'preview', true );
 $tpl->setVariable( 'survey', $survey );
